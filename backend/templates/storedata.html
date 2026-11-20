@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Intelligent E-health Engine for Bangladesh</h1>
+        <h4>A New Concept for Dramatic Improvement in the Public Health Sector</h4>
+    </header>
+    <main>
+        <section id="store-section">
+            <h2>Store Data</h2>
+            <form method="POST" action="{{ url_for('store') }}" id="store-form">
+                <label for="disease_name">Disease Name:</label>
+                <input type="text" id="disease_name" name="disease_name" value="{{ entities['diseases'][0] if entities['diseases'] else '' }}" required><br>
+
+                <label for="symptoms">Symptoms:</label>
+                {% if entities['symptoms'] %}
+                    {% for symptom in entities['symptoms'] %}
+                        <input type="text" name="symptoms" value="{{ symptom }}"><br>
+                    {% endfor %}
+                {% else %}
+                    <p>No symptoms identified</p>
+                {% endif %}
+                <br>
+
+                <label for="medication">Medication:</label>
+                {% for medication in entities['medications'] %}
+                    <input type="text" name="medication" value="{{ medication }}"><br>
+                {% endfor %}
+                <br>
+
+                <button type="submit" id="store-btn">Store Data</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; All Right Reserved By Ministry of Health and Family Welfare, Government of the People's Republic of Bangladesh</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

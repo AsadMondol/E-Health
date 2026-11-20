@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Health Document Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}""> 
+</head>
+<body>
+    <header>
+        <h1>Intelligent E-health Engine for Bangladesh</h1>
+        <h4> A New Concept for Dramatic Improvement in the Public Health Sector</h4>
+    </header>
+    <main>
+        <section id="upload-section">
+            <h2>Upload PDF or Image</h2>
+            <form id="upload-form" enctype="multipart/form-data" action="/submit" method="post">
+                <label for="file-input">Select PDF or Image File:</label>
+                <input type="file" id="file-input" name="pdfFile" accept=".pdf,.jpg,.jpeg,.png" required>
+                <button type="submit" id="upload-btn">Upload</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; All Right Reserved By Ministry of Health and Family Welfare, Government of the People's Republic of Bangladesh</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+Flask
+spacy
+PyMuPDF
+python-docx
+docx2pdf
+google-cloud-vision
+boto3

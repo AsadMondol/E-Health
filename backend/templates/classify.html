@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Health Document Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}""> 
+</head>
+<body>
+    <header>
+        <h1>Intelligent E-health Engine for Bangladesh</h1>
+        <h4> A New Concept for Dramatic Improvement in the Public Health Sector</h4>
+    </header>
+    <main>
+        <section id="classify-section">
+            <h2>Classify DSM</h2>
+            <form id="classify-form" action="/classify" method="post">
+                <button type="submit" id="classify-btn">Classify DSM</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; All Right Reserved By Ministry of Health and Family Welfare, Government of the People's Republic of Bangladesh</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
